@@ -11,7 +11,7 @@ do
 	if curl -s "https://www.leakedsource.com/main/?email=$name" | grep -q "This data was hacked on"
 	then
 		echo -e "$count Trying $name -- \033[0;32mSuccess!\033[0m"
-		echo $name >> wow.txt
+		echo $name >> results.txt
 		let count=count+1
 		let notice=0
 
