@@ -7,7 +7,7 @@ count="1"
 notice="1"
 
 if [ $# -eq 0 ]; then
-    echo "Usage: ./leakedsource.sh email-list.txt"
+    echo "\033[1;33mUsage: ./leakedsource.sh email-list.txt\033[0m"
     exit 1
 fi
 
