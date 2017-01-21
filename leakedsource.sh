@@ -6,6 +6,11 @@ filename="$1"
 count="1"
 notice="1"
 
+if [ $# -eq 0 ]; then
+    echo "Usage: ./leakedsource.sh email-list.txt"
+    exit 1
+fi
+
 while read name
 do
 	if curl -s "https://www.leakedsource.com/main/?email=$name" | grep -q "This data was hacked on"
